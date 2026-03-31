@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Rodrigo Oliveira</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .gradient-text { background: linear-gradient(to right, #D95D39, #E07A5F); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-bg { background: linear-gradient(to right, #D95D39, #E07A5F); }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-scroll { display: flex; width: max-content; animation: scroll 30s linear infinite; }
+        .animate-scroll:hover { animation-play-state: paused; }
+
+        /* A SOLUÇÃO DEFINITIVA: Puxando o arquivo relevo.png da sua pasta */
+        body {
+            background-color: #E6D7B1; /* Nossa cor areia do Sertão */
+            background-image: url('relevo.png'); /* Puxando o arquivo que você baixou! */
+            background-attachment: fixed;
+            background-blend-mode: multiply; /* Isso faz as linhas do mapa se misturarem perfeitamente com a cor de fundo */
+        }
+    </style>
+</head>
+<body class="text-[#211204] font-sans antialiased overflow-x-hidden relative">
+
+    <nav class="bg-[#D4C3B3]/95 shadow-lg fixed w-full top-0 z-50 backdrop-blur-md border-b border-[#C7B09C]">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#home" class="text-xl font-bold text-[#211204] tracking-wider">RODRIGO OLIVEIRA</a>
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#home" class="hover:text-[#D95D39] transition">Início</a>
+                    <a href="#sobre" class="hover:text-[#D95D39] transition">Sobre</a>
+                    <a href="#skills" class="hover:text-[#D95D39] transition">Habilidades</a>
+                    <a href="#experience" class="hover:text-[#D95D39] transition">Trabalhos</a>
+                    <a href="#contato" class="hover:text-[#D95D39] transition">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center relative pt-24 pb-16 px-6">
+        <div class="flex flex-col items-center md:items-start md:mr-16 mb-12 md:mb-0 fade-in">
+            <div class="relative">
+                <div class="absolute inset-0 rounded-full border-4 border-[#96A185] scale-105"></div>
+                <img src="minha-foto.jpg" alt="Rodrigo Oliveira" class="w-72 h-72 rounded-full shadow-2xl object-cover relative z-10">
+            </div>
+        </div>
+
+        <div class="text-center md:text-left max-w-2xl fade-in relative">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight bg-[#E6D7B1]/80 px-4 py-2 rounded-xl inline-block backdrop-blur-sm border border-[#C7B09C]/50">
+                Olá, sou <span class="gradient-text">Rodrigo Oliveira</span>
+            </h1>
+            <br>
+            <p class="text-xl md:text-2xl text-[#211204] font-semibold mb-6 bg-[#E6D7B1]/80 px-4 py-2 rounded-xl inline-block backdrop-blur-sm mt-2 border border-[#C7B09C]/50">
+                Videomaker | Operador de Drone | Edição Profissional
+            </p>
+            <p class="text-lg text-[#211204]/90 mb-10 max-w-xl mx-auto md:mx-0 bg-[#E6D7B1]/80 p-5 rounded-2xl backdrop-blur-sm font-medium border border-[#C7B09C]/50 shadow-sm">
+                Eternizando momentos com fotografia, filmagem e edição profissional para elevar sua produção audiovisual ao próximo nível.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-4">
+                <a href="#contato" class="bg-[#009688] hover:bg-[#00796B] text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg shadow-[#009688]/30">
+                    Entre em Contato
+                </a>
+                <a href="#experience" class="bg-[#F28F42] hover:bg-[#F4A261] text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg shadow-[#F28F42]/30">
+                    Ver Trabalhos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 bg-[#D4C3B3]/90 relative backdrop-blur-md border-y border-[#C7B09C]">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Sobre <span class="gradient-text">Mim</span></h2>
+                <div class="w-20 h-1 gradient-bg mx-auto rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-[#E6D7B1]/95 p-8 rounded-2xl shadow-xl fade-in border border-[#C7B09C]">
+                    <h3 class="text-2xl gradient-text mb-4 font-bold">Profissional do Audiovisual</h3>
+                    <p class="text-[#211204]/80 leading-relaxed mb-4">
+                        Sou um criador de conteúdo visual atuando fortemente em Teresina e região. Minha paixão é a captação de imagens e a edição rítmica, entregando vídeos que prendem a atenção do início ao fim.
+                    </p>
+                    <p class="text-[#211204]/80 leading-relaxed">
+                        Trabalho com equipamentos práticos e de alta qualidade, como o iPhone 13 Pro Max e áudio profissional Hollyland, além de criar projetos completos de iluminação cênica usando sistemas como o Lumikit. Gosto de atuar em equipe para desenvolver soluções criativas.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col gap-4 fade-in">
+                    <div class="bg-[#E6D7B1]/95 p-6 rounded-2xl border-l-4 border-[#E07A5F] shadow-md flex justify-between items-center hover:scale-105 transition duration-300">
+                        <div>
+                            <div class="text-[#211204]/60 text-sm">Foco Principal</div>
+                            <div class="text-[#E07A5F] text-3xl font-bold">Audiovisual</div>
+                            <div class="text-xs text-[#211204]/60 mt-1">Captação, Edição & Color Grading</div>
+                        </div>
+                        <span class="text-4xl">🎬</span>
+                    </div>
+                    
+                    <div class="bg-[#E6D7B1]/95 p-6 rounded-2xl border-l-4 border-[#F4A261] shadow-md flex justify-between items-center hover:scale-105 transition duration-300">
+                        <div>
+                            <div class="text-[#211204]/60 text-sm">Perspectiva Aérea</div>
+                            <div class="text-[#F4A261] text-3xl font-bold">Drones</div>
+                            <div class="text-xs text-[#211204]/60 mt-1">Operador de DJI Mini 3</div>
+                        </div>
+                        <span class="text-4xl">🚁</span>
+                    </div>
+
+                    <div class="bg-[#E6D7B1]/95 p-6 rounded-2xl border-l-4 border-[#009688] shadow-md flex justify-between items-center hover:scale-105 transition duration-300">
+                        <div>
+                            <div class="text-[#211204]/60 text-sm">Design Cênico</div>
+                            <div class="text-[#009688] text-3xl font-bold">Iluminação</div>
+                            <div class="text-xs text-[#211204]/60 mt-1">Programação Lumikit & Moving Heads</div>
+                        </div>
+                        <span class="text-4xl">💡</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-[#E6D7B1]/90 inline-block px-6 py-3 rounded-2xl backdrop-blur-sm border border-[#C7B09C]/50 shadow-sm">Minhas <span class="gradient-text">Habilidades</span></h2>
+                <div class="w-20 h-1 gradient-bg mx-auto rounded mt-2"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="fade-in bg-[#D4C3B3]/95 rounded-2xl p-8 border border-[#C7B09C] hover:border-[#E07A5F] hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(224,122,95,0.3)] transition-all duration-300 backdrop-blur-md">
+                    <h3 class="text-[#D95D39] text-2xl font-bold mb-6">📷 Captação</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-1.5 rounded-full text-sm bg-[#E6D7B1] text-[#211204] font-semibold border border-[#C7B09C]">Mobile/Videomaker</span>
+                        <span class="px-4 py-1.5 rounded-full text-sm bg-[#E6D7B1] text-[#211204] font-semibold border border-[#C7B09C]">Fotografia</span>
+                        <span class="px-4 py-1.5 rounded-full text-sm bg-[#E6D7B1] text-[#211204] font-semibold border border-[#C7B09C]">Camera</span>
+                    </div>
+                </div>
+
+                <div class="fade-in bg-[#D4C3B3]/95 rounded-2xl p-8 border border-[#C7B09C] hover:border-[#96A185] hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(150,161,133,0.3)] transition-all duration-300 backdrop-blur-md">
+                    <h3 class="text-[#7A8569] text-2xl font-bold mb-6">🎬 Edição de Vídeo</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-1.5 rounded-full text-sm bg-[#E6D7B1] text-[#211204] font-semibold border border-[#C7B09C]">Color Grading</span>
+                        <span class="px-4 py-1.5 rounded-full text-sm bg-[#E6D7B1] text-[#211204] font-semibold border border-[#C7B09C]">Cortes Dinâmicos</span>
+                        <span class="px-4 py-1.5 rounded-full text-sm bg-[#E6D7B1] text-[#211204] font-semibold border border-[#C7B09C]">SFX</span>
+                    </div>
+                </div>
+
+                <div class="fade-in bg-[#D4C3B3]/95 rounded-2xl p-8 border border-[#C7B09C] hover:border-[#F4A261] hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(244,162,97,0.3)] transition-all duration-300 backdrop-blur-md">
+                    <h3 class="text-[#D98A3B] text-2xl font-bold mb-6">🚁 Imagens Aéreas</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-1.5 rounded-full text-sm bg-[#E6D7B1] text-[#211204] font-semibold border border-[#C7B09C]">DJI Mini 3</span>
+                        <span class="px-4 py-1.5 rounded-full text-sm bg-[#E6D7B1] text-[#211204] font-semibold border border-[#C7B09C]">FPV Simulators</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-[#D4C3B3]/90 overflow-hidden relative backdrop-blur-md border-y border-[#C7B09C]">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Trabalhos e <span class="gradient-text">Experiência</span></h2>
+                <div class="w-20 h-1 gradient-bg mx-auto rounded"></div>
+            </div>
+
+            <div class="bg-[#E6D7B1]/95 rounded-2xl shadow-xl p-8 mb-8 border border-[#C7B09C] fade-in hover:shadow-[0_15px_40px_rgba(224,122,95,0.2)] transition-all">
+                <div class="flex items-start gap-4 mb-8">
+                    <div class="w-16 h-16 rounded-full bg-[#009688] flex items-center justify-center text-white font-bold text-2xl shadow-md">G3</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#211204]">G3-Telecom / Editor de Video</h3>
+                        <p class="text-[#211204]/60">3 meses</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold text-[#D95D39] mb-2">Produtor Audiovisual Pleno</h4>
+                    <ul class="space-y-3 text-[#211204]/80">
+                        <li class="flex items-start gap-3"><span class="text-[#D95D39] mt-1">▪</span> Cobertura fotográfica e em vídeo de eventos corporativos, inaugurações e festas.</li>
+                        <li class="flex items-start gap-3"><span class="text-[#D95D39] mt-1">▪</span> Edição avançada de vídeos, criação de reels dinâmicos e colorização.</li>
+                        <li class="flex items-start gap-3"><span class="text-[#D95D39] mt-1">▪</span> Captação de imagens aéreas cinematográficas.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-[#E6D7B1]/95 rounded-2xl shadow-xl p-8 mb-8 border border-[#C7B09C] fade-in hover:shadow-[0_15px_40px_rgba(224,122,95,0.2)] transition-all">
+                <div class="flex items-start gap-4 mb-8">
+                    <div class="w-16 h-16 rounded-full bg-[#E07A5F] flex items-center justify-center text-white font-bold text-2xl shadow-md">JP</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#211204]">Japan Motos / Editor de video</h3>
+                        <p class="text-[#211204]/60">3 meses</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold text-[#D95D39] mb-2">Produtor Audiovisual Pleno</h4>
+                    <ul class="space-y-3 text-[#211204]/80">
+                        <li class="flex items-start gap-3"><span class="text-[#D95D39] mt-1">▪</span> Cobertura fotográfica e em vídeo de eventos corporativos, inaugurações e festas.</li>
+                        <li class="flex items-start gap-3"><span class="text-[#D95D39] mt-1">▪</span> Edição avançada de vídeos, criação de reels dinâmicos e colorização.</li>
+                        <li class="flex items-start gap-3"><span class="text-[#D95D39] mt-1">▪</span> Captação de imagens aéreas cinematográficas.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-[#E6D7B1]/95 rounded-2xl shadow-xl p-8 mb-16 border border-[#C7B09C] fade-in hover:shadow-[0_15px_40px_rgba(224,122,95,0.2)] transition-all">
+                <div class="flex items-start gap-4 mb-8">
+                    <div class="w-16 h-16 rounded-full bg-[#F4A261] flex items-center justify-center text-[#211204] font-bold text-xl shadow-md">MCS</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#211204]">MCS Assistencia Tecnica em celulares / Tecnico</h3>
+                        <p class="text-[#211204]/60">Presente</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold text-[#D95D39] mb-2">Principais Atividades</h4>
+                    <ul class="space-y-3 text-[#211204]/80">
+                        <li class="flex items-start gap-3"><span class="text-[#D95D39] mt-1">▪</span> Manutenção de aparelhos celulares.</li>
+                        <li class="flex items-start gap-3"><spam class="text-[#D95D39] mt-1">▪</spam> Gerenciar sistema da assistencia</li>
+                        <li class="flex items-start gap-3"><spam class="text-[#D95D39] mt-1">▪</spam> Controle de qualidade</li>
+                    </ul>
+                </div>
+            </div>
+                <div class="my-10 border-t border-[#C7B09C]"></div>
+
+                <h4 class="text-2xl font-bold text-[#211204] mb-6 text-center">Projetos em Destaque</h4>
+                <div class="grid md:grid-cols-3 gap-6">
+                    
+                    <a href="#" target="_blank" class="bg-[#D4C3B3]/50 p-5 rounded-xl border border-[#C7B09C] hover:border-[#E07A5F] hover:-translate-y-1 hover:shadow-lg transition-all shadow-sm group cursor-pointer block">
+                        <div class="w-10 h-10 rounded-lg bg-white/60 text-[#E07A5F] flex items-center justify-center mb-4 text-xl shadow-sm group-hover:scale-110 transition-transform">🏢</div>
+                        <h5 class="font-bold text-[#211204] mb-2">Pre-Inauguração Supermercado Mateus</h5>
+                        <p class="text-sm text-[#211204]/70 mb-4">Cobertura da pre-inauguração da unidade na Av. Frei Serafim.</p>
+                        <span class="text-[#D95D39] text-sm font-bold flex items-center gap-1">Assistir Vídeo 
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </span>
+                    </a>
+
+                    <a href="https://www.behance.net/gallery/210826987/Campanha-Politica-2024-%28Lagoa-do-Piaui%29" target="_blank" class="bg-[#D4C3B3]/50 p-5 rounded-xl border border-[#C7B09C] hover:border-[#009688] hover:-translate-y-1 hover:shadow-lg transition-all shadow-sm group cursor-pointer block">
+                        <div class="w-10 h-10 rounded-lg bg-white/60 text-[#009688] flex items-center justify-center mb-4 text-xl shadow-sm group-hover:scale-110 transition-transform">🎥</div>
+                        <h5 class="font-bold text-[#211204] mb-2">Campanha Politica - Prefeitura 2k24</h5>
+                        <p class="text-sm text-[#211204]/70 mb-4">Produção audiovisual e captação de imagens para a candidata local.</p>
+                        <span class="text-[#009688] text-sm font-bold flex items-center gap-1">Veja as fotos
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </span>
+                    </a>
+
+                    <a href="#" target="_blank" class="bg-[#D4C3B3]/50 p-5 rounded-xl border border-[#C7B09C] hover:border-[#F4A261] hover:-translate-y-1 hover:shadow-lg transition-all shadow-sm group cursor-pointer block">
+                        <div class="w-10 h-10 rounded-lg bg-white/60 text-[#F4A261] flex items-center justify-center mb-4 text-xl shadow-sm group-hover:scale-110 transition-transform">🕶️</div>
+                        <h5 class="font-bold text-[#211204] mb-2">Promo Ray-Ban Meta</h5>
+                        <p class="text-sm text-[#211204]/70 mb-4">Vídeo promocional criativo gravado no Polo Cerâmico do Poti Velho.</p>
+                        <span class="text-[#F4A261] text-sm font-bold flex items-center gap-1">Assistir Vídeo 
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="text-center mt-20 mb-8 fade-in">
+                <h3 class="text-2xl font-bold text-[#211204]/70">Marcas e Eventos que já confiam no meu trabalho</h3>
+            </div>
+            
+            <div class="relative w-full overflow-hidden fade-in py-10">
+                <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#D4C3B3] to-transparent z-10"></div>
+                <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#D4C3B3] to-transparent z-10"></div>
+                
+                <div class="animate-scroll gap-16 items-center">
+                    <img src="cidade-junina.png" class="h-16 object-contain transition duration-300">
+                    <img src="comboio-cultural-elesbão-veloso.png" class="h-16 object-contain transition duration-300">
+                    <img src="Fiat.png" class="h-16 object-contain transition duration-300">
+                    <img src="forno-e-brasa.png" class="h-16 object-contain transition duration-300">
+                    <img src="G3-Telecom.png" class="h-16 object-contain transition duration-300">
+                    <img src="japan-motos.png" class="h-16 object-contain transition duration-300">
+                    <img src="mateus.png" class="h-16 object-contain transition duration-300">
+                    <img src="micarina.png" class="h-16 object-contain transition duration-300">
+                    <img src="miss-piaui-teen.png" class="h-16 object-contain transition duration-300">
+                    <img src="outlet-chic.png" class="h-16 object-contain transition duration-300">
+                    <img src="smart-expo.png" class="h-16 object-contain transition duration-300">
+
+                    
+                    <img src="cidade-junina.png" class="h-16 object-contain transition duration-300">
+                    <img src="comboio-cultural-elesbão-veloso.png" class="h-16 object-contain transition duration-300">
+                    <img src="Fiat.png" class="h-16 object-contain transition duration-300">
+                    <img src="forno-e-brasa.png" class="h-16 object-contain transition duration-300">
+                    <img src="G3-Telecom.png" class="h-16 object-contain transition duration-300">
+                    <img src="japan-motos.png" class="h-16 object-contain transition duration-300">
+                    <img src="mateus.png" class="h-16 object-contain transition duration-300">
+                    <img src="micarina.png" class="h-16 object-contain transition duration-300">
+                    <img src="miss-piaui-teen.png" class="h-16 object-contain transition duration-300">
+                    <img src="outlet-chic.png" class="h-16 object-contain transition duration-300">
+                    <img src="smart-expo.png" class="h-16 object-contain transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-24 relative z-10">
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-[#E6D7B1]/90 inline-block px-6 py-3 rounded-2xl backdrop-blur-sm border border-[#C7B09C]/50 shadow-sm fade-in">Entre em <span class="gradient-text">Contato</span></h2>
+            <div class="w-20 h-1 gradient-bg mx-auto rounded mb-4 mt-2 fade-in"></div>
+            <p class="text-[#211204]/90 mb-12 fade-in font-medium bg-[#E6D7B1]/90 inline-block px-6 py-2 rounded-full backdrop-blur-sm border border-[#C7B09C]/50 shadow-sm">Vamos conversar sobre sua próxima produção audiovisual!</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 fade-in">
+                <a href="https://wa.me/5586998630128" class="bg-[#D4C3B3]/95 p-8 rounded-2xl shadow-md hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(224,122,95,0.3)] border border-[#C7B09C] transition-all backdrop-blur-md">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-bold text-[#211204] mb-2">WhatsApp</h3>
+                    <p class="text-[#211204]/70">(86) 998630128</p>
+                </a>
+                <a href="https://www.instagram.com/rodriguinho_adsb/" class="bg-[#D4C3B3]/95 p-8 rounded-2xl shadow-md hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(244,162,97,0.3)] border border-[#C7B09C] transition-all backdrop-blur-md">
+                    <div class="text-4xl mb-4">📸</div>
+                    <h3 class="text-xl font-bold text-[#211204] mb-2">Instagram</h3>
+                    <p class="text-[#211204]/70">@rodriguinho_adsb</p>
+                </a>
+                <a href="#" class="bg-[#D4C3B3]/95 p-8 rounded-2xl shadow-md hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,150,136,0.3)] border border-[#C7B09C] transition-all backdrop-blur-md">
+                    <div class="text-4xl mb-4">✉️</div>
+                    <h3 class="text-xl font-bold text-[#211204] mb-2">Email</h3>
+                    <p class="text-[#211204]/70">rodrigo150.ro@gmail.com</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#C7B09C]/95 py-8 text-center border-t border-[#BCA38F] relative z-10 backdrop-blur-md">
+        <h3 class="text-xl font-bold text-[#211204] mb-2">Rodrigo Oliveira</h3>
+        <p class="text-sm text-[#211204]/60 mb-4">Copyright © 2026 - Todos os direitos reservados</p>
+        <p class="text-xs text-[#211204]/50">Construído com <span class="text-[#009688] font-bold">Tailwind CSS</span> & <span class="text-[#F4A261] font-bold">JavaScript</span></p>
+    </footer>
+
+    <script>
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
